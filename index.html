@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video Full HD</title>
+
+<!-- SKRIP MONETAG SERVICE WORKER -->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(reg) {
+        console.log('SW Monetag berhasil didaftarkan:', reg.scope);
+      })
+      .catch(function(err) {
+        console.error('Pendaftaran SW gagal:', err);
+      });
+  }
+</script>
+
 <style>
 body{margin:0;background:#000;color:#fff;text-align:center;font-family:Arial}
 .box{position:relative;max-width:600px;margin:10px auto;background:#111}
@@ -27,4 +41,4 @@ video{width:100%}
 <p style="font-size:12px;color:#888">Klik dimanapun akan membuka Shopee / Iklan Monetag = $ Masuk</p>
 
 </body>
-</html>
+  </html>
